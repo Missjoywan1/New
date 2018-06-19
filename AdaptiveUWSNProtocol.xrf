@@ -1,0 +1,113 @@
+
+
+***********************************************************************
+**  PACKAGE Predefined
+**  #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,10,9)
+***********************************************************************
+2  NEWTYPE Boolean            #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,12,10)
+2  NEWTYPE Character          #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,23,9)
+2  NEWTYPE Charstring         #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,81,9)
+2  NEWTYPE Integer            #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,115,9)
+2  NEWTYPE Real               #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,144,9)
+2  NEWTYPE Pid                #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,212,9)
+2  NEWTYPE Duration           #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,218,9)
+2  NEWTYPE Time               #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,234,9)
+2  NEWTYPE Bit                #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,248,9)
+2  NEWTYPE Bit_string         #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,258,9)
+2  NEWTYPE Octet              #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,279,9)
+2  NEWTYPE Octet_string       #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,310,9)
+2  NEWTYPE NULL               #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,328,9)
+2  NEWTYPE Object_identifier  #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,332,9)
+2  NEWTYPE Any_type           #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,347,9)
+2  SYNTYPE IA5String          #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,96,3)
+2  SYNTYPE NumericString      #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,101,3)
+2  SYNTYPE PrintableString    #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,106,3)
+2  SYNTYPE VisibleString      #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,111,3)
+2  SYNTYPE Natural            #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,142,9)
+2  GENERATOR String           #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,66,11)
+2  GENERATOR Array            #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,162,11)
+2  GENERATOR Powerset         #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,169,11)
+2  GENERATOR Bag              #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,190,11)
+2  GENERATOR Own              #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,350,11)
+2  GENERATOR Oref             #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,360,11)
+2  SYNONYM PLUS_INFINITY      #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,159,9)
+2  SYNONYM MINUS_INFINITY     #SDTREF(TEXT,C:\IBM\Rational\SDL_TTCN_Suite6.3\sdt\sdtdir\wini386\predef.sdl,160,9)
+
+***********************************************************************
+**  SYSTEM AdaptiveUWSNProtocol
+**  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy,4,1,8)
+***********************************************************************
+2  SIGNAL CR                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(1),317(60,50),2,1)
+2  SIGNAL CC                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(1),317(60,50),3,1)
+2  SIGNAL DT                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(1),317(60,50),4,1)
+2  SIGNAL ACKA                #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(1),317(60,50),5,1)
+2  SIGNAL ACKB                #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(1),317(60,50),6,1)
+2  SIGNAL ACKC                #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(1),317(60,50),7,1)
+2  CHANNEL ISAP1              #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),452(27,50),1,1)
+2  CHANNEL ISAP2              #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),488(62,50),1,1)
+2  CHANNEL ISAP3              #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),497(100,50),1,1)
+2  CHANNEL ISAP4              #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),506(140,50),1,1)
+2  CHANNEL MSAP1              #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),371(20,130),1,1)
+2  CHANNEL MSAP2              #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),392(55,130),1,1)
+2  CHANNEL MSAP3              #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),401(95,130),1,1)
+2  CHANNEL MSAP4              #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),410(137,130),1,1)
+2  BLOCK MasterNode           #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk,4,1,7)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),119(20,75),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),119(20,75),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),119(20,75),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),119(20,75),1,1)
+     REFERENCE                #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),119(20,75),1,1)
+2  BLOCK NodeA                #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),122(60,75),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),122(60,75),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),122(60,75),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),122(60,75),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),122(60,75),1,1)
+2  BLOCK NodeB                #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),125(100,75),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),125(100,75),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),125(100,75),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),125(100,75),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),125(100,75),1,1)
+2  BLOCK NodeC                #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),128(140,75),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),128(140,75),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),128(140,75),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),128(140,75),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),128(140,75),1,1)
+2  BLOCK BlockMedium          #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175),1,1)
+     CHANNEL                  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175),1,1)
+
+***********************************************************************
+**  BLOCK MasterNode
+**  <<SYSTEM AdaptiveUWSNProtocol>>
+**  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk,4,1,7)
+***********************************************************************
+
+***********************************************************************
+**  BLOCK NodeA
+**  <<SYSTEM AdaptiveUWSNProtocol>>
+**  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),122(60,75),1,1)
+***********************************************************************
+
+***********************************************************************
+**  BLOCK NodeB
+**  <<SYSTEM AdaptiveUWSNProtocol>>
+**  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),125(100,75),1,1)
+***********************************************************************
+
+***********************************************************************
+**  BLOCK NodeC
+**  <<SYSTEM AdaptiveUWSNProtocol>>
+**  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),128(140,75),1,1)
+***********************************************************************
+
+***********************************************************************
+**  BLOCK BlockMedium
+**  <<SYSTEM AdaptiveUWSNProtocol>>
+**  #SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175),1,1)
+***********************************************************************

@@ -1,0 +1,190 @@
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy,4)*/
+system AdaptiveUWSNProtocol;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(1),317(60,50))*/
+newtype SequenceNumber
+literals 0,1;
+operators succ: SequenceNumber -> SequenceNumber;
+axioms 
+succ (0) ==1;
+succ (1) == 0;
+endnewtype SequenceNumber;
+
+newtype IPDUType
+literals CR, DT,CC,AK_A,AK_B,AK_C;
+endnewtype IPDUType;
+
+Signal
+CR,
+CC,
+DT(SequenceNumber, Timestamp),
+AK_A(SequenceNumber, Timestamp),
+AK_B(SequenceNumber, Timestamp),
+AK_C(SequenceNumber, Timestamp),
+MDATreq(MSDUType),
+MDATind(MSDUType),
+ICONreq,
+IDATreq,
+ICONconf,
+ISDUType2 (Mask_ID);
+
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),452(27,50))*/
+channel /*#E*/ 
+ISAP1 from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),119(20,75))*/
+MasterNode to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),453(42,32))*/
+ICONconf;
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),119(20,75))*/
+MasterNode with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),454(42,62))*/
+ICONreq,
+IDATreq;
+endchannel ISAP1;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),488(62,50))*/
+channel /*#E*/ 
+ISAP2 from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),122(60,75))*/
+NodeA to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),489(77,32))*/
+ICONconf;
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),122(60,75))*/
+NodeA with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),490(77,62))*/
+ICONreq,
+IDATreq;
+endchannel ISAP2;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),497(100,50))*/
+channel /*#E*/ 
+ISAP3 from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),125(100,75))*/
+NodeB to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),498(115,32))*/
+ICONconf;
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),125(100,75))*/
+NodeB with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),499(115,62))*/
+ICONreq,
+IDATreq;
+endchannel ISAP3;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),506(140,50))*/
+channel /*#E*/ 
+ISAP4 from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),128(140,75))*/
+NodeC to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),507(155,32))*/
+ICONconf;
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),128(140,75))*/
+NodeC with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),508(155,62))*/
+ICONreq,
+IDATreq;
+endchannel ISAP4;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),371(20,130))*/
+channel /*#E*/ 
+MSAP1 from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),119(20,75))*/
+MasterNode to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175))*/
+BlockMedium with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),372(37,162))*/
+MDATreq;
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175))*/
+BlockMedium to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),119(20,75))*/
+MasterNode with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),373(37,102))*/
+MDATind;
+endchannel MSAP1;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),392(55,130))*/
+channel /*#E*/ 
+MSAP2 from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),122(60,75))*/
+NodeA to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175))*/
+BlockMedium with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),393(75,162))*/
+MDATreq;
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175))*/
+BlockMedium to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),122(60,75))*/
+NodeA with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),394(75,102))*/
+MDATind;
+endchannel MSAP2;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),401(95,130))*/
+channel /*#E*/ 
+MSAP3 from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),125(100,75))*/
+NodeB to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175))*/
+BlockMedium with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),402(112,162))*/
+MDATreq;
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175))*/
+BlockMedium to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),125(100,75))*/
+NodeB with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),403(112,102))*/
+MDATind;
+endchannel MSAP3;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),410(137,130))*/
+channel /*#E*/ 
+MSAP4 from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),128(140,75))*/
+NodeC to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175))*/
+BlockMedium with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),411(155,162))*/
+MDATreq;
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175))*/
+BlockMedium to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),128(140,75))*/
+NodeC with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),412(155,102))*/
+MDATind;
+endchannel MSAP4;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),119(20,75))*/
+block /*#E*/ 
+MasterNode referenced;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),122(60,75))*/
+block /*#E*/ 
+NodeA referenced;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),125(100,75))*/
+block /*#E*/ 
+NodeB referenced;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),128(140,75))*/
+block /*#E*/ 
+NodeC referenced;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175))*/
+block /*#E*/ 
+BlockMedium referenced;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy,4)*/
+endsystem AdaptiveUWSNProtocol;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\NodeC.sbk,4)*/
+block NodeC;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\NodeC.sbk,4)*/
+endblock NodeC;

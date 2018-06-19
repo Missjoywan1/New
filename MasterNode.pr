@@ -1,0 +1,395 @@
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy,4)*/
+system AdaptiveUWSNProtocol;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(1),317(60,50))*/
+newtype SequenceNumber
+literals 0,1;
+operators succ: SequenceNumber -> SequenceNumber;
+axioms 
+succ (0) ==1;
+succ (1) == 0;
+endnewtype SequenceNumber;
+
+newtype IPDUType
+literals CR, DT,CC,AK_A,AK_B,AK_C;
+endnewtype IPDUType;
+
+Signal
+CR,
+CC,
+DT(SequenceNumber, Timestamp),
+AK_A(SequenceNumber, Timestamp),
+AK_B(SequenceNumber, Timestamp),
+AK_C(SequenceNumber, Timestamp),
+MDATreq(MSDUType),
+MDATind(MSDUType),
+ICONreq,
+IDATreq,
+ICONconf,
+ISDUType2 (Mask_ID);
+
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),452(27,50))*/
+channel /*#E*/ 
+ISAP1 from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),119(20,75))*/
+MasterNode to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),453(42,32))*/
+ICONconf;
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),119(20,75))*/
+MasterNode with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),454(42,62))*/
+ICONreq,
+IDATreq;
+endchannel ISAP1;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),488(62,50))*/
+channel /*#E*/ 
+ISAP2 from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),122(60,75))*/
+NodeA to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),489(77,32))*/
+ICONconf;
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),122(60,75))*/
+NodeA with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),490(77,62))*/
+ICONreq,
+IDATreq;
+endchannel ISAP2;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),497(100,50))*/
+channel /*#E*/ 
+ISAP3 from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),125(100,75))*/
+NodeB to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),498(115,32))*/
+ICONconf;
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),125(100,75))*/
+NodeB with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),499(115,62))*/
+ICONreq,
+IDATreq;
+endchannel ISAP3;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),506(140,50))*/
+channel /*#E*/ 
+ISAP4 from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),128(140,75))*/
+NodeC to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),507(155,32))*/
+ICONconf;
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),128(140,75))*/
+NodeC with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),508(155,62))*/
+ICONreq,
+IDATreq;
+endchannel ISAP4;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),371(20,130))*/
+channel /*#E*/ 
+MSAP1 from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),119(20,75))*/
+MasterNode to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175))*/
+BlockMedium with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),372(37,162))*/
+MDATreq;
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175))*/
+BlockMedium to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),119(20,75))*/
+MasterNode with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),373(37,102))*/
+MDATind;
+endchannel MSAP1;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),392(55,130))*/
+channel /*#E*/ 
+MSAP2 from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),122(60,75))*/
+NodeA to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175))*/
+BlockMedium with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),393(75,162))*/
+MDATreq;
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175))*/
+BlockMedium to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),122(60,75))*/
+NodeA with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),394(75,102))*/
+MDATind;
+endchannel MSAP2;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),401(95,130))*/
+channel /*#E*/ 
+MSAP3 from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),125(100,75))*/
+NodeB to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175))*/
+BlockMedium with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),402(112,162))*/
+MDATreq;
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175))*/
+BlockMedium to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),125(100,75))*/
+NodeB with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),403(112,102))*/
+MDATind;
+endchannel MSAP3;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),410(137,130))*/
+channel /*#E*/ 
+MSAP4 from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),128(140,75))*/
+NodeC to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175))*/
+BlockMedium with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),411(155,162))*/
+MDATreq;
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175))*/
+BlockMedium to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),128(140,75))*/
+NodeC with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),412(155,102))*/
+MDATind;
+endchannel MSAP4;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),119(20,75))*/
+block /*#E*/ 
+MasterNode referenced;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),122(60,75))*/
+block /*#E*/ 
+NodeA referenced;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),125(100,75))*/
+block /*#E*/ 
+NodeB referenced;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),128(140,75))*/
+block /*#E*/ 
+NodeC referenced;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy(2),131(20,175))*/
+block /*#E*/ 
+BlockMedium referenced;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\AdaptiveUWSNProtocol.ssy,4)*/
+endsystem AdaptiveUWSNProtocol;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk,4)*/
+block MasterNode;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),131(97,35))*/
+signalroute /*#E*/ 
+ISAP from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),116(80,70))*/
+Initiator to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),132(97,17))*/
+ICONreq, IDATreq;
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),116(80,70))*/
+Initiator with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),133(97,65))*/
+ICONconf;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),122(97,112))*/
+signalroute /*#E*/ 
+IPDU from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),116(80,70))*/
+Initiator to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),119(80,150))*/
+Coder_Ini with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),123(97,142))*/
+CR, DT(SequenceNumber, TimeStamp);
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),119(80,150))*/
+Coder_Ini to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),116(80,70))*/
+Initiator with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),124(97,92))*/
+CC, AK_A(SequenceNumber, Timestamp), 
+AK_B (SequenceNumber, Timestamp),
+AK_C (SequenceNumber, Timestamp);
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),140(97,185))*/
+signalroute /*#E*/ 
+MSAP from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),119(80,150))*/
+Coder_Ini to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),104(15,15))*/
+env with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),141(97,207))*/
+MDATreq (MSDUType);
+from 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),104(15,15))*/
+env to 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),119(80,150))*/
+Coder_Ini with 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),142(97,172))*/
+MDATind (MSDUType);
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),116(80,70))*/
+process /*#E*/ 
+Initiator(1,1) referenced;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),119(80,150))*/
+process /*#E*/ 
+Coder_Ini(1,1) referenced;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),137(92,7))*/
+connect /*#E*/ 
+ISAP1 and 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),131(97,35))*/
+ISAP;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),146(92,217))*/
+connect /*#E*/ 
+MSAP1 and 
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk(1),140(97,185))*/
+MSAP;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\MasterNode.sbk,4)*/
+endblock MasterNode;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr,4)*/
+process Initiator;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(1),116(65,10))*/
+DCL
+counter int,
+BC ISDUType,
+number SequenceNumber,
+ntime Timestamp,
+Mask_ID ISDUType2;
+
+Timer T;
+
+synonym p Duration = 10;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(1),119(30,55))*/
+start /*#E*/ 
+;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(1),128(30,70))*/
+nextstate /*#E*/ 
+disconnected;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(1),128(30,70))*/
+state /*#E*/ 
+disconnected;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(1),134(30,85))*/
+input /*#E*/ 
+ICONreq;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(1),140(30,100))*/
+task /*#E*/ 
+counter :=1;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(1),146(30,115))*/
+output /*#E*/ 
+CR;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(1),152(30,130))*/
+/*#E*/ 
+Set
+(now+p, T);
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(1),158(30,145))*/
+nextstate /*#E*/ 
+Waiting;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(1),128(30,70))*/
+endstate;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(1),173(105,55))*/
+state /*#E*/ 
+Waiting;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(1),176(105,70))*/
+input /*#E*/ 
+CC;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(1),182(105,85))*/
+/*#E*/ 
+Reset (T);
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(1),188(105,100))*/
+task /*#E*/ 
+number :=int;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(1),194(105,115))*/
+output /*#E*/ 
+ICONconf;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(1),200(105,130))*/
+nextstate /*#E*/ 
+Connected;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(1),173(105,55))*/
+endstate;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),383(10,35))*/
+state /*#E*/ 
+Connected;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),419(10,50))*/
+input /*#E*/ 
+IDATreq;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),425(10,65))*/
+/*#E*/ 
+Set (counter);
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),431(10,80))*/
+decision /*#E*/ 
+counter=0;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),482(22,92))*/
+():
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),479(5,95))*/
+output /*#E*/ 
+DT (number, ntime);
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),491(5,110))*/
+task /*#E*/ 
+counter :=1;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),497(5,125))*/
+/*#E*/ 
+Set 
+(now+p, T);
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),506(5,140))*/
+nextstate /*#E*/ 
+Sending;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),524(52,87))*/
+(<counter):
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),521(40,95))*/
+nextstate /*#E*/ 
+Waiting;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),431(10,80))*/
+enddecision;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),383(10,35))*/
+endstate;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),527(100,35))*/
+state /*#E*/ 
+Sending;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),533(90,50))*/
+input /*#E*/ 
+Ak (number, ntime);
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),551(90,65))*/
+/*#E*/ 
+Set (T);
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),566(90,80))*/
+decision /*#E*/ 
+T=0;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),575(102,92))*/
+(>T):
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),572(85,95))*/
+task /*#E*/ 
+Store (number, ntime);
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),596(80,110))*/
+task /*#E*/ 
+Generate (Mask_ID);
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),602(75,125))*/
+output /*#E*/ 
+Send (Mask_ID);
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),608(70,140))*/
+task /*#E*/ 
+Counter :=Counter-1;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),614(70,155))*/
+nextstate /*#E*/ 
+connected;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),581(157,87))*/
+(<T):
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),578(145,95))*/
+/*#E*/ 
+Set (T+1);
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),584(145,110))*/
+nextstate /*#E*/ 
+Waiting;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),566(90,80))*/
+enddecision;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr(2),527(100,35))*/
+endstate;
+/*#SDTREF(SDL,C:\Users\jnjoroge\Documents\Thesis1\Initiator.spr,4)*/
+endprocess Initiator;

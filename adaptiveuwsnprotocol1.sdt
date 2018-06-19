@@ -1,0 +1,57 @@
+SDT-SYSTEM-6.3
+[DRIVES]
+[SOURCE-TARGET-DIRECTORY]
+[DIAGRAMS]
+0 23 "Adaptive BC Protocol" %unconnected% 0 0 0 ""
+0 1 AdaptiveUWSNProtocol AdaptiveUWSNProtocol.ssy 8 1529399115 AdaptiveUWSNProtocol ""
+1 2 MasterNode MasterNode.sbk 0 1529052654 MasterNode ""
+2 5 Initiator Initiator.spr 0 1529310019 I ""
+2 5 Coder_Ini Coder_Ini.spr 0 1529310316 C ""
+1 2 BlockMedium BlockMedium.sbk 0 1529310372 BlockMedium ""
+1 2 NodeA NodeA.sbk 0 1529310383 NodeA ""
+1 2 NodeB NodeB.sbk 0 1529310391 NodeB ""
+1 2 NodeC NodeC.sbk 0 1529310408 NodeC ""
+0 23 "Other Documents" %unconnected% 0 0 0 ""
+[VIEWOPTIONS]
+ShowDirectories=True
+ShowLongMenus=True
+[ANALYSEROPTIONS]
+ASN1KeywordFile=False
+ASN1Parameter=False
+CoderBufferInSDL=Octet-String
+Filter=False
+InstanceFile=False
+SynonymFileName=""
+[H2SDLOPTIONS]
+AllWarnings=False
+Preprocessor=""
+PreprocessorOptions=""
+TranslateEnum=True
+UseFullPath=True
+UsePreprocessorOptions=False
+[STATEMATRIXOPTIONS]
+[INDEXOPTIONS]
+ShowSelectedTypes=True
+ShowSelectedUses=True
+ShowSelectedDiagrams=True
+FilterTypes=
+FilterUses=
+FilterDiagrams=
+NameFirst=True
+IndexAppearance=Detailed
+[PACKAGEGENERATOROPTIONS]
+DuplicateFile=
+[MAKEOPTIONS]
+CCompilerDriver=False
+Kernel=SCTAMDEBCOM
+[PRINTOPTIONS]
+DestinationFormat=PSFile
+FirstPageNo=1
+MarginLeft=100
+MarginLower=250
+MarginRight=100
+MarginUpper=420
+PrinterFile=""
+PrintFrom=0
+PrintTo=0
+PrintToFile=False
